@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/* Donovan and ben
+ * 4/23/2025
+ * handles the wave and timer 
+ */
+
 public class Waves : MonoBehaviour
 {
     //bool for all enemies are dead
-    public bool enemiesClear;
+    private bool enemiesClear;
     //int to count the enemies
-    private int enemiesPresent = 0;
+    public int enemiesPresent = 0;
     //int for current wave
     public int waves = 0;
+    //duration of each wave
     public float waveTimer = 30;
     //bool for the wave to be over in coroutine
     private bool waveOver;
@@ -18,7 +24,6 @@ public class Waves : MonoBehaviour
     private void Start()
     {
         Wave();
-        StartCoroutine(Test());
     }
 
     private void Update()
@@ -37,7 +42,7 @@ public class Waves : MonoBehaviour
             if ((waveOver == true) && (enemiesClear == true))
             {
                 waves++;
-               // StartCoroutine(WaveTimer());
+                StartCoroutine(WaveTimer());
 
 
             }
@@ -47,7 +52,7 @@ public class Waves : MonoBehaviour
 
         }
     }
-    /*
+    
     private IEnumerator WaveTimer()
     {
         waveOver = false;
@@ -55,12 +60,6 @@ public class Waves : MonoBehaviour
         waveOver = true;
 
     }
-    */
-    private IEnumerator Test()
-    {
-        print("Before");
-        yield return new WaitForSeconds(3);
-        print("after");
-    }
+    
     
 }

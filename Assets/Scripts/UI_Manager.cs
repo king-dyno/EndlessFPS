@@ -5,6 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/* Donovan and ben
+ * 4/23/2025
+ * handles the UI elements
+ */
+
 public class UI_Manager : MonoBehaviour
 {
     //Donovan and ben
