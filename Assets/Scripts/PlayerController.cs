@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
     //the multiplier for jumping
     public float jumpForce = 8f;
 
-
     //Start is a function that is called once when the object is Instatiated. 
     void Start()
     {
