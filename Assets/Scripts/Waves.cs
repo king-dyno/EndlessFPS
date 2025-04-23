@@ -37,11 +37,9 @@ public class Waves : MonoBehaviour
     
     private void Wave()
     {
-        for (int i = 0; i < 100; i++)
-        {
+        
             if ((waveOver == true) && (enemiesClear == true))
             {
-                waves++;
                 StartCoroutine(WaveTimer());
 
 
@@ -50,7 +48,7 @@ public class Waves : MonoBehaviour
 
 
 
-        }
+       
     }
     
     private IEnumerator WaveTimer()
@@ -58,8 +56,9 @@ public class Waves : MonoBehaviour
         waveOver = false;
         yield return new WaitForSeconds(waveTimer);
         waveOver = true;
+        waves++;
 
     }
-    
-    
+
+
 }
