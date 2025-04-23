@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
    /* Donovan and ben
-    * 4/19/2025
+    * 4/23/2025
     * handles character movement and attacking
     */
 public class PlayerController : MonoBehaviour
@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
     public int lives = 3;
     //the multiplier for jumping
     public float jumpForce = 8f;
-
 
     //Start is a function that is called once when the object is Instatiated. 
     void Start()
