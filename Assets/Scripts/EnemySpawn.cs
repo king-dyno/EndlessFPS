@@ -26,6 +26,7 @@ public class EnemySpawn : MonoBehaviour
     private void SpawnEnemy()
     {
         Instantiate(enemy);
+        waves.enemiesPresent++;
 
     }
 }

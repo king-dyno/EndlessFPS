@@ -386,17 +386,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1138250620}
   m_SourcePrefab: {fileID: 100100000, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
---- !u!114 &1138250612 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3990858120944833321, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
-  m_PrefabInstance: {fileID: 1138250611}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138250613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9603121102da774591af3b7e8216ac7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1138250613 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4583929615559478269, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
@@ -416,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesPresent: 0
   waves: 0
-  waveTimer: 30
+  waveTimer: 5
 --- !u!114 &1138250620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +420,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves: {fileID: 1138250614}
   enemy: {fileID: 3790832146225163034, guid: 33c2e52d6d6e4e7498e492e7d397089b, type: 3}
+--- !u!114 &1138250621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2779828660654887079, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
+  m_PrefabInstance: {fileID: 1138250611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138250613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908fb08b76ede4446b74beb09241ec7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196024473
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 5591160067990526182, guid: da463ab139b55cf48aa351b53a0a811f, type: 3}
       propertyPath: playerCtrl
       value: 
-      objectReference: {fileID: 1138250612}
+      objectReference: {fileID: 1138250621}
     - target: {fileID: 5625122193391120575, guid: da463ab139b55cf48aa351b53a0a811f, type: 3}
       propertyPath: m_Pivot.x
       value: 0

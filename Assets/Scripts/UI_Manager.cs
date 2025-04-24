@@ -15,7 +15,7 @@ public class UI_Manager : MonoBehaviour
     //Donovan and ben
     //4/19/2025
     // handles player and game ui
-    public PlayerController playerCtrl;
+    public FPSController playerCtrl;
     public Waves waves;
     
     public TMP_Text livesText;
