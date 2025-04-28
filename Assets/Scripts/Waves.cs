@@ -13,11 +13,11 @@ public class Waves : MonoBehaviour
     public EnemySpawn enemySpawn;
 
     //int for current wave
-    public int waveCount = 1;
+    public int waveCount = 0;
 
     private void Start()
     {
-        StartWave();
+
     }
 
     private void Update()
@@ -30,7 +30,9 @@ public class Waves : MonoBehaviour
         
         if (enemySpawn.enemiesClear == true)
         {
-            enemySpawn.SpawnEnemy();
+            waveCount++;
+            
+            enemySpawn.WaveSpawn();
 
         }
 

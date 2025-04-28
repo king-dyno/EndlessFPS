@@ -22,16 +22,12 @@ public class EnemySpawn : MonoBehaviour
     //bool for all enemies are dead
     public bool enemiesClear;
     //int to count the enemies
-    public int enemiesPresent = 0;
+    public int enemyCount = 0;
 
-    void Start()
-    {
-
-    }
 
     void Update()
     {
-        if (enemiesPresent == 0)
+        if (enemyCount == 0)
         {
             enemiesClear = true;
         }
@@ -54,7 +50,7 @@ public class EnemySpawn : MonoBehaviour
         Vector3 spawnPosition = transform.position + spawnDirection * spawnRadius;
 
         Instantiate(enemy, spawnPosition,Quaternion.identity);
-        enemiesPresent++;
+        enemyCount++;
         print("enemy spawned");
 
     }

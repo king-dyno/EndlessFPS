@@ -33,7 +33,7 @@ public class UI_Manager : MonoBehaviour
         //display current wave
         waveText.text = "Wave: " + waves.waveCount;
         //displays the amount of enemies
-        enemyText.text = "Enemies remaining: " + enemySpawn.enemiesPresent;
+        enemyText.text = "Enemies remaining: " + enemySpawn.enemyCount;
 
         if (playerCtrl.lives <= 0)
         {

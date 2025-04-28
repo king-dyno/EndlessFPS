@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 2779828660654887079}
   - component: {fileID: 9177551742889998543}
   - component: {fileID: 4930998498517756218}
+  - component: {fileID: 7521697494699234783}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawn: {fileID: 4930998498517756218}
-  waveCount: 0
+  waveCount: 1
 --- !u!114 &4930998498517756218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +305,22 @@ MonoBehaviour:
   enemy: {fileID: 3790832146225163034, guid: 33c2e52d6d6e4e7498e492e7d397089b, type: 3}
   spawnRadius: 0
   enemiesClear: 1
-  enemiesPresent: 0
+  enemyCount: 0
+--- !u!114 &7521697494699234783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4583929615559478269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334e6ab5dcb290f429ee697e4cf826a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDistance: 50
+  mainCamera: {fileID: 4846322535980870145}
+  enemySpawn: {fileID: 4930998498517756218}
 --- !u!1 &5496266112508963716
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +522,7 @@ Transform:
   m_GameObject: {fileID: 8330630010890692491}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00014187675, y: 0.7071068, z: 0.00014187675, w: 0.7071068}
-  m_LocalPosition: {x: 0.5799915, y: -0.19261146, z: 0.810754}
+  m_LocalPosition: {x: 0.5799915, y: -0.37, z: 0.81}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:

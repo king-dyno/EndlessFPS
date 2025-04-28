@@ -4,19 +4,13 @@ using UnityEngine;
 
 /* Donovan and Ben
  * 4/28/2025
- * handles the enemy movement and hits
+ * handles the enemy movement
  */
 
 public class EnemyMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }

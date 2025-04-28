@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GunShoot : MonoBehaviour
@@ -7,6 +8,8 @@ public class GunShoot : MonoBehaviour
 
     public float bulletDistance = 50f;
     public Camera mainCamera;
+    public EnemySpawn enemySpawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +28,18 @@ public class GunShoot : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0)) 
         {
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
             RaycastHit hit;
             
-            if (Physics.Raycast(ray, out hit, bulletDistance )) 
+            if (Physics.Raycast(ray, out hit, bulletDistance)) 
             {
-                print("hit");
+                if(hit.transform.gameObject.GetComponent<EnemyMovement>())
+                {
+                    //destroys enemy if they are shot
+                    Destroy(hit.transform.transform.gameObject);
+                    enemySpawn.enemyCount--;
+                }
             
             }
 
