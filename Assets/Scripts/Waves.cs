@@ -3,62 +3,39 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-/* Donovan and ben
- * 4/23/2025
- * handles the wave and timer 
+/* Donovan and Ben
+ * 4/28/2025
+ * handles the wave
  */
 
 public class Waves : MonoBehaviour
 {
-    //bool for all enemies are dead
-    private bool enemiesClear;
-    //int to count the enemies
-    public int enemiesPresent = 0;
+    public EnemySpawn enemySpawn;
+
     //int for current wave
-    public int waves = 0;
-    //duration of each wave
-    public float waveTimer = 30;
-    //bool for the wave to be over in coroutine
-    private bool waveOver;
+    public int waveCount = 1;
 
     private void Start()
     {
-        Wave();
+        StartWave();
     }
 
     private void Update()
     {
-        if (enemiesPresent == 0)
-        {
-            enemiesClear = true;
-            waveOver = true;
-        }
+        StartWave();
     }
     
-    private void Wave()
+    private void StartWave()
     {
         
-            if ((waveOver == true) && (enemiesClear == true))
-            {
-                StartCoroutine(WaveTimer());
+        if (enemySpawn.enemiesClear == true)
+        {
+            enemySpawn.SpawnEnemy();
 
+        }
 
-            }
-
-
-
-
-       
     }
     
-    private IEnumerator WaveTimer()
-    {
-        waveOver = false;
-        yield return new WaitForSeconds(waveTimer);
-        waveOver = true;
-        waves++;
-
-    }
 
 
 }

@@ -201,6 +201,8 @@ GameObject:
   - component: {fileID: 7036130059982879979}
   - component: {fileID: 2799258862949956737}
   - component: {fileID: 2779828660654887079}
+  - component: {fileID: 9177551742889998543}
+  - component: {fileID: 4930998498517756218}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -270,7 +272,39 @@ MonoBehaviour:
   gravity: 10
   lookSpeed: 4
   lookXLimit: 45
+  lives: 3
   canMove: 1
+--- !u!114 &9177551742889998543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4583929615559478269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d6665690508c34486ece356b8e6b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawn: {fileID: 4930998498517756218}
+  waveCount: 0
+--- !u!114 &4930998498517756218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4583929615559478269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1071f4553a1b47e46a020389df415013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves: {fileID: 9177551742889998543}
+  enemy: {fileID: 3790832146225163034, guid: 33c2e52d6d6e4e7498e492e7d397089b, type: 3}
+  spawnRadius: 0
+  enemiesClear: 1
+  enemiesPresent: 0
 --- !u!1 &5496266112508963716
 GameObject:
   m_ObjectHideFlags: 0

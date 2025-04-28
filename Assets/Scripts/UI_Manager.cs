@@ -17,9 +17,12 @@ public class UI_Manager : MonoBehaviour
     // handles player and game ui
     public FPSController playerCtrl;
     public Waves waves;
-    
+    public EnemySpawn enemySpawn;
+
+
     public TMP_Text livesText;
     public TMP_Text waveText;
+    public TMP_Text enemyText;
 
 
     // Update is called once per frame
@@ -28,7 +31,9 @@ public class UI_Manager : MonoBehaviour
         //display lives
         livesText.text = "Lives: " + playerCtrl.lives; 
         //display current wave
-        waveText.text = "Wave: " + waves.waves;
+        waveText.text = "Wave: " + waves.waveCount;
+        //displays the amount of enemies
+        enemyText.text = "Enemies remaining: " + enemySpawn.enemiesPresent;
 
         if (playerCtrl.lives <= 0)
         {
