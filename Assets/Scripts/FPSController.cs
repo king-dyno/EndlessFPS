@@ -15,6 +15,7 @@ public class FPSController : MonoBehaviour
     public float lookXLimit = 45f;
 
     public int health = 100;
+    public int ammo = 100;
 
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;

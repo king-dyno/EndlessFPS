@@ -48,14 +48,14 @@ public class Pickups : MonoBehaviour
     {
         if (health)
         {
-            GetComponent<FPSController>().lives++;
+            GetComponent<FPSController>().health += 25;
         }
     }
     private void Ammo()
     {
         if (ammo)
         {
-            GetComponent<FPSController>().lives++;
+            GetComponent<FPSController>().ammo += 10;
         }
     }
 }
