@@ -76,7 +76,7 @@ public class FPSController : MonoBehaviour
     }
     public void Loselife() 
     {
-        health--;
+        health -= 5;
         if (health == 0) 
         {
             //game over
