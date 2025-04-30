@@ -153,7 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammo: 0
+  AmmoPickup: {fileID: 0}
   health: 1
+  HealthPickup: {fileID: 5505750573548036456}
   extraDmg: 0
   other: 0
 --- !u!65 &4367710546905749920

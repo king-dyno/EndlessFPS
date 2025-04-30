@@ -39,8 +39,10 @@ public class GunShoot : MonoBehaviour
                     //destroys enemy if they are shot
                     Destroy(hit.transform.transform.gameObject);
                     enemySpawn.enemyCount--;
+                    GetComponent<Pickups>().Drop();
+
                 }
-            
+
 
 
             }

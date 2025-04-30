@@ -5,6 +5,7 @@ using UnityEngine.Rendering.VirtualTexturing;
 
 public class Pickups : MonoBehaviour
 {
+    public GameObject DropType;
 
     public bool ammo = false;
     public bool health = false;
@@ -56,6 +57,34 @@ public class Pickups : MonoBehaviour
         if (ammo)
         {
             GetComponent<FPSController>().ammo += 10;
+        }
+    }
+    /// <summary>
+    /// Random to see if a pickup is dropped
+    /// </summary>
+    public void Drop()
+    {
+        int dropChance = Random.Range(1, 4);
+        
+        if(dropChance == 3)
+        {
+            Instantiate(DropType, new(transform.parent.position.x, 1f, transform.parent.position.z), Quaternion.identity);
+        }
+    }
+    /// <summary>
+    /// chooses which pickup is dropped
+    /// </summary>
+    public void SummonDropRandom()
+    {
+        int dropChoice = Random.Range(1, 4);
+
+        if( dropChoice == 1)
+        {
+            Instantiate(DropType, new(transform.parent.position.x, 1f, transform.parent.position.z), Quaternion.identity);
+        }
+        if (dropChoice == 2)
+        {
+            Instantiate(DropType, new(transform.parent.position.x, 1, transform.parent.position.z), Quaternion.identity);
         }
     }
 }
