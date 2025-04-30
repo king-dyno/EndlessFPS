@@ -20,7 +20,7 @@ public class UI_Manager : MonoBehaviour
     public EnemySpawn enemySpawn;
 
 
-    public TMP_Text livesText;
+    public TMP_Text HealthText;
     public TMP_Text waveText;
     public TMP_Text enemyText;
 
@@ -29,13 +29,13 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         //display lives
-        livesText.text = "Lives: " + playerCtrl.lives; 
+        HealthText.text = "Health" + playerCtrl.health; 
         //display current wave
         waveText.text = "Wave: " + waves.waveCount;
         //displays the amount of enemies
         enemyText.text = "Enemies remaining: " + enemySpawn.enemyCount;
 
-        if (playerCtrl.lives <= 0)
+        if (playerCtrl.health <= 0)
         {
             SceneManager.LoadScene(2);
         }

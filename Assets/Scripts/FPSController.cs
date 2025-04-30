@@ -14,7 +14,7 @@ public class FPSController : MonoBehaviour
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
 
-    public int lives = 3;
+    public int health = 100;
 
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
@@ -71,6 +71,14 @@ public class FPSController : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         
+        }
+    }
+    public void Loselife() 
+    {
+        health--;
+        if (health == 0) 
+        {
+            //game over
         }
     }
 

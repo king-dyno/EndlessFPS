@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2050621574240130266}
   - component: {fileID: 216611142494863697}
   - component: {fileID: 911105431944561626}
-  - component: {fileID: 2071045843641569283}
+  - component: {fileID: 2535586048788384532}
+  - component: {fileID: 4891417016244661741}
   m_Layer: 0
   m_Name: BasicEnemy
   m_TagString: Untagged
@@ -106,7 +107,29 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2071045843641569283
+--- !u!195 &2535586048788384532
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3790832146225163034}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 11
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4891417016244661741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,3 +141,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def087b5d224ce24483464743fc1aa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 2535586048788384532}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  sightRange: 20
+  playerInSightRange: 0
