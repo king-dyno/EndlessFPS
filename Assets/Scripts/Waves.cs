@@ -14,15 +14,11 @@ public class Waves : MonoBehaviour
 
     //int for current wave
     public int waveCount = 0;
+    public float WaveDuration = 1f;
 
     private void Start()
     {
-
-    }
-
-    private void Update()
-    {
-        StartWave();
+        StartCoroutine(WaveCheck());
     }
     
     private void StartWave()
@@ -38,6 +34,12 @@ public class Waves : MonoBehaviour
 
     }
     
+    private IEnumerator WaveCheck()
+    {
+        StartWave();
 
+        yield return new WaitForSeconds(WaveDuration);
+        StartCoroutine(WaveCheck());
+    }
 
 }

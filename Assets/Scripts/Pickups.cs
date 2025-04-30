@@ -13,6 +13,7 @@ public class Pickups : MonoBehaviour
     private float speed = .3f;
     private Vector3 moveDir;
 
+    
     private void Start()
     {
         moveDir = Vector3.up;
@@ -22,6 +23,8 @@ public class Pickups : MonoBehaviour
     {
         if (other.gameObject.GetComponent<FPSController>())
         {
+            Health();
+            Ammo();
             gameObject.SetActive(false);
         }
     }
@@ -30,21 +33,29 @@ public class Pickups : MonoBehaviour
         transform.Rotate(0, .1f, 0);
         Floating();
     }
-
+    /// <summary>
+    /// having the pickup float up and down
+    /// </summary>
     private void Floating()
     {
         transform.position += moveDir * speed * Time.deltaTime;
-        if (transform.position.y >= 1.25)
-        {
+        if (transform.position.y >= 1.25 || transform.position.y <= .75)
             moveDir *= -1;
 
-        }
-        if (transform.position.y <= .75)
-        {
-            moveDir *= -1;
-
-        }
     }
 
-
+    private void Health()
+    {
+        if (health)
+        {
+            GetComponent<FPSController>().lives++;
+        }
+    }
+    private void Ammo()
+    {
+        if (ammo)
+        {
+            GetComponent<FPSController>().lives++;
+        }
+    }
 }

@@ -20,7 +20,7 @@ public class EnemySpawn : MonoBehaviour
     private float spawnAngle;
 
     //bool for all enemies are dead
-    public bool enemiesClear;
+    public bool enemiesClear = true;
     //int to count the enemies
     public int enemyCount = 0;
 
@@ -60,11 +60,9 @@ public class EnemySpawn : MonoBehaviour
     /// </summary>
     public void WaveSpawn()
     {
-        
         for (int i = 0; i < waves.waveCount; i++)
         {
             SpawnEnemy();
-            print("wave spawned");
         }
     }
 }

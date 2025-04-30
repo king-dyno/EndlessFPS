@@ -288,7 +288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawn: {fileID: 4930998498517756218}
-  waveCount: 1
+  waveCount: 0
+  WaveDuration: 1
 --- !u!114 &4930998498517756218
 MonoBehaviour:
   m_ObjectHideFlags: 0
