@@ -23,13 +23,12 @@ public class UI_Manager : MonoBehaviour
     public TMP_Text HealthText;
     public TMP_Text waveText;
     public TMP_Text enemyText;
-
+    
 
     // Update is called once per frame
     void Update()
     {
-        //display lives
-        HealthText.text = "Health" + playerCtrl.health; 
+       
         //display current wave
         waveText.text = "Wave: " + waves.waveCount;
         //displays the amount of enemies

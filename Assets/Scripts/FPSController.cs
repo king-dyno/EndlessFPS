@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
 {
+    public Image Healthbar; 
     public Camera playerCamera;
     public float walkSpeed = 6f;
     public float runSpeed = 13f;
@@ -17,10 +19,14 @@ public class FPSController : MonoBehaviour
     public int health = 100;
     public int ammo = 100;
 
+    
+
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
     public bool canMove = true;
+
+    
 
     CharacterController characterController;
 
@@ -77,6 +83,7 @@ public class FPSController : MonoBehaviour
     public void Loselife() 
     {
         health--;
+        Healthbar.fillAmount = health;
         if (health == 0) 
         {
             //game over
