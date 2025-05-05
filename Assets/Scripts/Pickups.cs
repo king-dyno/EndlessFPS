@@ -29,6 +29,10 @@ public class Pickups : MonoBehaviour
             {
                 other.gameObject.GetComponent<FPSController>().ammoCount += 10;
             }
+            if (health)
+            {
+                other.gameObject.GetComponent<FPSController>().health += 25;
+            }
             gameObject.SetActive(false);
         }
     }
@@ -48,11 +52,4 @@ public class Pickups : MonoBehaviour
 
     }
 
-    private void Health()
-    {
-        if (health)
-        {
-            GetComponent<FPSController>().health += 25;
-        }
-    }
 }

@@ -51,7 +51,6 @@ public class EnemySpawn : MonoBehaviour
 
         Instantiate(enemy, spawnPosition,Quaternion.identity);
         enemyCount++;
-        print("enemy spawned");
 
     }
 
