@@ -43,7 +43,7 @@ public class EnemyMovement : MonoBehaviour
         //check if colliding object was the player
         if (collision.gameObject.GetComponent<FPSController>())
         {
-            collision.gameObject.GetComponent<FPSController>().Loselife();
+            collision.gameObject.GetComponent<FPSController>().Loselife(20f);
         }
     }
 

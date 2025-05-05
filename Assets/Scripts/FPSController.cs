@@ -15,7 +15,7 @@ public class FPSController : MonoBehaviour
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
 
-    public int health = 100;
+    public float health = 100f;
     public int ammo = 100;
 
     public Image HealthBar;
@@ -79,10 +79,10 @@ public class FPSController : MonoBehaviour
         
         }
     }
-    public void Loselife() 
+    public void Loselife(float damage) 
     {
-        health--;
-        HealthBar.fillAmount = health;
+        health -= damage;
+        HealthBar.fillAmount = health / 100f;
         if (health == 0) 
         {
             //game over

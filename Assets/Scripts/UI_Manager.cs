@@ -36,10 +36,7 @@ public class UI_Manager : MonoBehaviour
         //displays the amount of enemies
         enemyText.text = "Enemies remaining: " + enemySpawn.enemyCount;
 
-        if (fpsCtrl.health <= 0)
-        {
-            SceneManager.LoadScene(2);
-        }
+        
     }
 
     public void PlayPressed(int sceneIndex)
