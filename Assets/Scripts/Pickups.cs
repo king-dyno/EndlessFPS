@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
 
@@ -24,8 +25,10 @@ public class Pickups : MonoBehaviour
     {
         if (other.gameObject.GetComponent<FPSController>())
         {
-            Health();
-            Ammo();
+            if (ammo)
+            {
+                other.gameObject.GetComponent<FPSController>().ammoCount += 10;
+            }
             gameObject.SetActive(false);
         }
     }
@@ -50,13 +53,6 @@ public class Pickups : MonoBehaviour
         if (health)
         {
             GetComponent<FPSController>().health += 25;
-        }
-    }
-    private void Ammo()
-    {
-        if (ammo)
-        {
-            GetComponent<FPSController>().ammo += 10;
         }
     }
 }
