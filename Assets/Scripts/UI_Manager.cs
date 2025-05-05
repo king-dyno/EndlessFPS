@@ -23,6 +23,7 @@ public class UI_Manager : MonoBehaviour
   
     public TMP_Text waveText;
     public TMP_Text enemyText;
+    public TMP_Text ammoText;
     
 
     // Update is called once per frame
@@ -35,6 +36,8 @@ public class UI_Manager : MonoBehaviour
         waveText.text = "Wave: " + waves.waveCount;
         //displays the amount of enemies
         enemyText.text = "Enemies remaining: " + enemySpawn.enemyCount;
+
+        ammoText.text = "Bullets remaining: " + fpsCtrl.ammoCount;
 
         
     }

@@ -274,7 +274,7 @@ MonoBehaviour:
   lookSpeed: 4
   lookXLimit: 45
   health: 100
-  ammo: 100
+  ammoCount: 100
   HealthBar: {fileID: 0}
   canMove: 1
 --- !u!114 &9177551742889998543
@@ -323,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDistance: 50
   mainCamera: {fileID: 4846322535980870145}
+  fpsCtrl: {fileID: 2779828660654887079}
   enemySpawn: {fileID: 4930998498517756218}
   AmmoPickup: {fileID: 4304300020779998956, guid: ab02301e8f4e5554fa6cb09ae511ebd7, type: 3}
   HealthPickup: {fileID: 5505750573548036456, guid: bbe33796582aff145be96af312e6c8e9, type: 3}

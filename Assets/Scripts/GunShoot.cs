@@ -8,6 +8,7 @@ public class GunShoot : MonoBehaviour
 
     public float bulletDistance = 50f;
     public Camera mainCamera;
+    public FPSController fpsCtrl;
     public EnemySpawn enemySpawn;
     public GameObject AmmoPickup;
     public GameObject HealthPickup;
@@ -28,6 +29,7 @@ public class GunShoot : MonoBehaviour
             Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
             RaycastHit hit;
+            fpsCtrl.ammoCount--;
             
             if (Physics.Raycast(ray, out hit, bulletDistance)) 
             {
@@ -37,8 +39,9 @@ public class GunShoot : MonoBehaviour
                     Destroy(hit.transform.transform.gameObject);
                     enemySpawn.enemyCount--;
 
+                    //chance to drop a pickup
                     int dropChance = Random.Range(1, 4);
-
+                    //if it hits then spawn a random pickup
                     if (dropChance == 3)
                     {
                         int dropChoice = Random.Range(1, 3);
