@@ -9,12 +9,9 @@ public class GunShoot : MonoBehaviour
     public float bulletDistance = 50f;
     public Camera mainCamera;
     public EnemySpawn enemySpawn;
+    public GameObject AmmoPickup;
+    public GameObject HealthPickup;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -39,8 +36,22 @@ public class GunShoot : MonoBehaviour
                     //destroys enemy if they are shot
                     Destroy(hit.transform.transform.gameObject);
                     enemySpawn.enemyCount--;
-                    GetComponent<Pickups>().Drop();
 
+                    int dropChance = Random.Range(1, 4);
+
+                    if (dropChance == 3)
+                    {
+                        int dropChoice = Random.Range(1, 3);
+
+                        if (dropChoice == 1)
+                        {
+                            Instantiate(HealthPickup, new(hit.transform.position.x, 1, hit.transform.position.z), Quaternion.identity);
+                        }
+                        if (dropChoice == 2)
+                        {
+                            Instantiate(AmmoPickup, new(hit.transform.position.x, 1, hit.transform.position.z), Quaternion.identity);
+                        }
+                    }
                 }
 
 

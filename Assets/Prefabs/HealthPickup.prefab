@@ -132,7 +132,7 @@ Transform:
   m_GameObject: {fileID: 5505750573548036456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.016017571, y: 2.5038888, z: -6.95}
+  m_LocalPosition: {x: 0.016017571, y: 1, z: -6.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -153,9 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammo: 0
-  AmmoPickup: {fileID: 0}
   health: 1
-  HealthPickup: {fileID: 5505750573548036456}
   extraDmg: 0
   other: 0
 --- !u!65 &4367710546905749920

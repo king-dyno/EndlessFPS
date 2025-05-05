@@ -371,6 +371,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4930998498517756218, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
+      propertyPath: AmmoPickup
+      value: 
+      objectReference: {fileID: 4304300020779998956, guid: ab02301e8f4e5554fa6cb09ae511ebd7, type: 3}
+    - target: {fileID: 4930998498517756218, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
+      propertyPath: HealthPickup
+      value: 
+      objectReference: {fileID: 5505750573548036456, guid: bbe33796582aff145be96af312e6c8e9, type: 3}
     - target: {fileID: 7036130059982879979, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -411,6 +419,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7521697494699234783, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
+      propertyPath: pickups
+      value: 
+      objectReference: {fileID: -6048882272061686549, guid: 33c2e52d6d6e4e7498e492e7d397089b, type: 3}
     - target: {fileID: 9177551742889998543, guid: 64cc007d84659454fbabb1e1084ffecf, type: 3}
       propertyPath: waveCount
       value: 0
