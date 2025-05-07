@@ -42,10 +42,7 @@ public class UI_Manager : MonoBehaviour
         
     }
 
-    public void PlayPressed(int sceneIndex)
-    {
-        SceneManager.LoadScene(sceneIndex);
-    }
+    
     public void QuitPressed()
     {
         Application.Quit();
