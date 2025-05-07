@@ -29,16 +29,16 @@ public class GunShoot : MonoBehaviour
     private void ShootGun() 
     {
         
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0) && gameObject.GetComponent<FPSController>().ammoCount > 0) 
         {
-            muzzleFlash.SetActive(true);
+            
            
 
             Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
             RaycastHit hit;
             fpsCtrl.ammoCount--;
-            
+           
             if (Physics.Raycast(ray, out hit, bulletDistance)) 
             {
                 if(hit.transform.gameObject.GetComponent<EnemyMovement>())
@@ -64,8 +64,8 @@ public class GunShoot : MonoBehaviour
                         }
                     }
                 }
-                
 
+                
 
 
             }
@@ -73,6 +73,10 @@ public class GunShoot : MonoBehaviour
             
         }
         
+    }
+    void MuzzleFlash() 
+    {
+        muzzleFlash.SetActive(true);
     }
 
 }

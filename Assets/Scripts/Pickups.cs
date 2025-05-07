@@ -31,7 +31,7 @@ public class Pickups : MonoBehaviour
             }
             if (health)
             {
-                other.gameObject.GetComponent<FPSController>().health += 25;
+                other.gameObject.GetComponent<FPSController>().Heal(25f);
             }
             gameObject.SetActive(false);
         }
