@@ -19,12 +19,7 @@ public class GunShoot : MonoBehaviour
     {
         ShootGun();
     }
-    private void Start()
-    {
-        muzzleFlash = GameObject.Find("muzzleflash");
-        if (muzzleFlash != null)
-            muzzleFlash.SetActive(false);
-    }
+
 
     private void ShootGun() 
     {
@@ -74,10 +69,7 @@ public class GunShoot : MonoBehaviour
         }
         
     }
-    void MuzzleFlash() 
-    {
-        muzzleFlash.SetActive(true);
-    }
+  
 
 }
 
