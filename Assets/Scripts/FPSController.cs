@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
@@ -85,8 +86,14 @@ public class FPSController : MonoBehaviour
         HealthBar.fillAmount = health / 100f;
         if (health == 0) 
         {
-            //game over
+            SceneManager.LoadScene(0);
         }
+    }
+    public void Heal(float healingamount) 
+    {
+        health += healingamount;
+        health = Mathf.Clamp(health, 0, 100);
+        HealthBar.fillAmount = health / 100f;
     }
 
 
