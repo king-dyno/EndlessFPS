@@ -12,20 +12,28 @@ public class GunShoot : MonoBehaviour
     public EnemySpawn enemySpawn;
     public GameObject AmmoPickup;
     public GameObject HealthPickup;
-
+    public GameObject muzzleFlash;
 
     // Update is called once per frame
     void Update()
     {
         ShootGun();
     }
-
+    private void Start()
+    {
+        muzzleFlash = GameObject.Find("muzzleflash");
+        if (muzzleFlash != null)
+            muzzleFlash.SetActive(false);
+    }
 
     private void ShootGun() 
     {
         
         if (Input.GetMouseButtonDown(0)) 
         {
+            muzzleFlash.SetActive(true);
+           
+
             Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
             RaycastHit hit;
@@ -56,6 +64,7 @@ public class GunShoot : MonoBehaviour
                         }
                     }
                 }
+                
 
 
 
