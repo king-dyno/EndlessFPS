@@ -41,16 +41,5 @@ public class UI_Manager : MonoBehaviour
 
     }
 
-<<<<<<< Updated upstream
     
-    public void QuitPressed()
-    {
-        Application.Quit();
-    }
-    public void ReplayPressed(int sceneIndex)
-    {
-        SceneManager.LoadScene(sceneIndex);
-    }
-=======
->>>>>>> Stashed changes
 }
