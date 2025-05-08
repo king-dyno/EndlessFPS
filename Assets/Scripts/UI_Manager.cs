@@ -39,9 +39,9 @@ public class UI_Manager : MonoBehaviour
 
         ammoText.text = "Bullets remaining: " + fpsCtrl.ammoCount;
 
-        
     }
 
+<<<<<<< Updated upstream
     
     public void QuitPressed()
     {
@@ -51,4 +51,6 @@ public class UI_Manager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIndex);
     }
+=======
+>>>>>>> Stashed changes
 }
