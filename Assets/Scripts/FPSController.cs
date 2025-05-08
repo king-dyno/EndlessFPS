@@ -17,7 +17,7 @@ public class FPSController : MonoBehaviour
     public float lookXLimit = 45f;
 
     public float health = 100f;
-    public int ammoCount = 100;
+    public int ammoCount = 50;
 
     public Image HealthBar;
 

@@ -275,7 +275,7 @@ MonoBehaviour:
   lookSpeed: 4
   lookXLimit: 45
   health: 100
-  ammoCount: 100
+  ammoCount: 30
   HealthBar: {fileID: 0}
   canMove: 1
 --- !u!114 &9177551742889998543

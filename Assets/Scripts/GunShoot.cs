@@ -41,6 +41,7 @@ public class GunShoot : MonoBehaviour
                     //destroys enemy if they are shot
                     Destroy(hit.transform.transform.gameObject);
                     enemySpawn.enemyCount--;
+                    GetComponent<DeathMenu>().totalCount++;
 
                     //chance to drop a pickup
                     int dropChance = Random.Range(1, 4);
