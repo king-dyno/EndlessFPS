@@ -12,7 +12,7 @@ public class GunShoot : MonoBehaviour
     public EnemySpawn enemySpawn;
     public GameObject AmmoPickup;
     public GameObject HealthPickup;
-    public GameObject muzzleFlash;
+    public AudioSource effect;
 
     // Update is called once per frame
     void Update()
@@ -26,8 +26,8 @@ public class GunShoot : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0) && gameObject.GetComponent<FPSController>().ammoCount > 0) 
         {
-            
-           
+
+            effect.Play();
 
             Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
@@ -41,7 +41,7 @@ public class GunShoot : MonoBehaviour
                     //destroys enemy if they are shot
                     Destroy(hit.transform.transform.gameObject);
                     enemySpawn.enemyCount--;
-                    GetComponent<DeathMenu>().totalCount++;
+                    
 
                     //chance to drop a pickup
                     int dropChance = Random.Range(1, 4);
