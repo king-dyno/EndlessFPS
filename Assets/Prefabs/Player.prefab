@@ -328,7 +328,7 @@ MonoBehaviour:
   enemySpawn: {fileID: 4930998498517756218}
   AmmoPickup: {fileID: 4304300020779998956, guid: ab02301e8f4e5554fa6cb09ae511ebd7, type: 3}
   HealthPickup: {fileID: 5505750573548036456, guid: bbe33796582aff145be96af312e6c8e9, type: 3}
-  muzzleFlash: {fileID: 0}
+  effect: {fileID: 2847463709109584320, guid: e97fb319c8c79a548b8bd6c2b9cc695d, type: 3}
 --- !u!136 &3932817801927470416
 CapsuleCollider:
   m_ObjectHideFlags: 0
