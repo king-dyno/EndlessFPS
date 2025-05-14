@@ -86,7 +86,7 @@ public class FPSController : MonoBehaviour
         HealthBar.fillAmount = health / 100f;
         if (health == 0) 
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
     public void Heal(float healingamount) 
