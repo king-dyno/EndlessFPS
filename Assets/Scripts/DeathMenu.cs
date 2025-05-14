@@ -6,8 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
+    public Scene deathMenu;
 
+    private void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
 
+        if (currentScene == deathMenu)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        
+
+    }
+    void update()
+    {
+    }
 
     public void PlayPressed(int sceneIndex)
     {
